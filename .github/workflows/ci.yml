@@ -12,16 +12,16 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-     contents: read
+     contents: write-all
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Auto green
         run: |
           git config --local user.email "848987400@qq.com"
           git config --local user.name "Meldarkbini"
-          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git remote set-url origin http://git.###.com/###-front-xxx.git
           git pull --rebase
           git commit --allow-empty -m "a commit a day keeps your girlfriend away"
           git push
