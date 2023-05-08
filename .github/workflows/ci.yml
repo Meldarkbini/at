@@ -13,8 +13,7 @@ jobs:
 
     permissions:
      contents: read
-               write-all
-  
+               write
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
