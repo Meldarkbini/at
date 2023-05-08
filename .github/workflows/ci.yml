@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-     contents:read
+     contents: read
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
